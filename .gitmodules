@@ -1,0 +1,6 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Anthony-Phillip-Collins/fullstack-docker-pern-frontend.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/Anthony-Phillip-Collins/fullstack-docker-pern-backend.git
