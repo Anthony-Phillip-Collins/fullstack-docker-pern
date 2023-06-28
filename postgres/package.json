@@ -1,0 +1,13 @@
+{
+  "name": "postgres-docker",
+  "version": "0.1.0",
+  "description": "run postgres in docker container",
+  "scripts": {
+    "docker:dev:up": "docker compose -f docker-compose.dev.yml up",
+    "docker:dev:down": "docker compose -f docker-compose.dev.yml down --remove-orphans",
+    "docker:dev:psql": "docker exec -it dev.postgres psql postgres postgres",
+    "docker:dev:init": "docker exec -it db chmod +x /docker-entrypoint-initdb.d/init.sh"
+  },
+  "author": "Anthony Collins",
+  "license": "ISC"
+}

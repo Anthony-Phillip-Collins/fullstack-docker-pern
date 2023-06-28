@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  dev.frontend:
+    extends:
+      file: ./frontend/docker-compose.dev.yml
+      service: dev.frontend
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8080/api/
+    depends_on:
+      dev.backend:
+        condition: service_started
+  dev.backend:
+    extends:
+      file: ./backend/docker-compose.dev.yml
+      service: dev.backend
+    depends_on:
+      dev.mongo:
+        condition: service_started
+      dev.postgres:
+        condition: service_started
+  dev.mongo:
+    extends:
+      file: ./mongo/docker-compose.dev.yml
+      service: dev.mongo
+  dev.postgres:
+    extends:
+      file: ./postgres/docker-compose.dev.yml
+      service: dev.postgres
+  dev.nginx:
+    extends:
+      file: ./nginx/docker-compose.dev.yml
+      service: dev.nginx
+    depends_on:
+      dev.frontend:
+        condition: service_started
+  dev.debug-helper:
+    image: busybox
+    container_name: dev.debug-helper
