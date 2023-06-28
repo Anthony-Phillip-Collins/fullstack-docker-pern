@@ -1,13 +1,12 @@
 {
-  "name": "docker-orchestration-boilertplate",
-  "version": "1.0.0",
-  "description": "boilertplate for fullstack docker orchestration",
+  "name": "fullstack-docker-postgress-express-react-nginx",
+  "version": "1.1.1",
+  "description": "Fullstack app with docker, postgress (or mongo), express, react, and nginx",
   "scripts": {
     "docker:dev:build": "docker compose -f docker-compose.dev.yml build",
     "docker:dev:build:nc": "npm run docker:dev:build -- --no-cache",
     "docker:dev:up": "docker compose -f docker-compose.dev.yml up",
-    "docker:dev:down": "docker compose -f docker-compose.dev.yml down --remove-orphans",
-    "docker:dev:mongosh": "docker exec -it dev.mongo mongosh admin -u root -p 'example'"
+    "docker:dev:down": "docker compose -f docker-compose.dev.yml down --remove-orphans"
   },
   "author": "Anthony Collins",
   "license": "ISC"
