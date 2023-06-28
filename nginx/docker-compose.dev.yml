@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   dev.nginx:
-    image: myapp.dev.nginx
+    image: fullstack-docker-pern.dev.nginx
     container_name: dev.nginx
     build:
       context: .
