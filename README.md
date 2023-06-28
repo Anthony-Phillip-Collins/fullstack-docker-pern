@@ -39,5 +39,5 @@ Once up and running visit http://localhost:8080/
 
 ## Deploy to Heroku
 
-1. Follow the instructions in [./backend/README.md](./backend/README.md)
-2. Follow the instructions in [./frontend/README.md](./frontend/README.md)
+1. Follow the instructions in _./backend/README.md_
+2. Follow the instructions in _./frontend/README.md_
