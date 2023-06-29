@@ -37,6 +37,16 @@ Or you could use the equvalent util npm scripts in package.json e.g. `npm run do
 
 Once up and running visit http://localhost:8080/
 
+### Connect to Adminer
+
+Once up and running visit http://localhost:8000/ and enter the following credentials.
+
+- System: PostgreSQL
+- Server: dev.postgres
+- Username: postgres
+- Password: example
+- Database: postgres
+
 ## Deploy to Heroku
 
 1. Follow the instructions in _./backend/README.md_

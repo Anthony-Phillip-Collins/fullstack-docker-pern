@@ -27,6 +27,14 @@ services:
     extends:
       file: ./postgres/docker-compose.dev.yml
       service: dev.postgres
+  dev.adminer:
+    extends:
+      file: ./postgres/docker-compose.dev.yml
+      service: dev.adminer
+  dev.pgadmin:
+    extends:
+      file: ./postgres/docker-compose.dev.yml
+      service: dev.pgadmin
   dev.nginx:
     extends:
       file: ./nginx/docker-compose.dev.yml
