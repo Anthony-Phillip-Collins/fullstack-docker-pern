@@ -1,5 +1,3 @@
--- Postgress Table Creation
-
 CREATE TABLE IF NOT EXISTS blogs (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
