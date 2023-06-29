@@ -28,3 +28,22 @@ Log into Adminer at http://localhost:8000/ and select the following:
 - Server: dev.postgres
 - Username: postgres
 - Password: example
+
+### PgAdmin
+
+Log into PgAdmin at http://localhost:8001/ and select the following:
+
+- Email: fakemail@gmail.com
+- Password: example
+
+Then follow these steps:
+
+1. Add New Server
+2. On the General tab enter Name e.g. MyServer
+3. On the Connection tab set the following credentials
+
+- Host: dev.postgres
+- Port: 5432
+- Maintenance database: postgres
+- Username: postgres
+- Password: example
