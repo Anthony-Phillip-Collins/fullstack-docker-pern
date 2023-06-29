@@ -15,14 +15,8 @@ services:
       file: ./backend/docker-compose.dev.yml
       service: dev.backend
     depends_on:
-      dev.mongo:
-        condition: service_started
       dev.postgres:
         condition: service_started
-  dev.mongo:
-    extends:
-      file: ./mongo/docker-compose.dev.yml
-      service: dev.mongo
   dev.postgres:
     extends:
       file: ./postgres/docker-compose.dev.yml
@@ -31,10 +25,6 @@ services:
     extends:
       file: ./postgres/docker-compose.dev.yml
       service: dev.adminer
-  dev.pgadmin:
-    extends:
-      file: ./postgres/docker-compose.dev.yml
-      service: dev.pgadmin
   dev.nginx:
     extends:
       file: ./nginx/docker-compose.dev.yml

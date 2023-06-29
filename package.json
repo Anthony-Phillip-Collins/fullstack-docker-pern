@@ -1,7 +1,7 @@
 {
   "name": "fullstack-docker-postgress-express-react-nginx",
   "version": "1.1.2",
-  "description": "Fullstack app with docker, postgress (or mongo), express, react, and nginx",
+  "description": "Fullstack app with docker, postgress, express, react, and nginx",
   "keywords": [
     "fullstack",
     "docker",
@@ -9,7 +9,6 @@
     "express",
     "react",
     "nginx",
-    "mongodb",
     "typescript",
     "vite"
   ],
