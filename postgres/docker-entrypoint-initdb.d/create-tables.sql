@@ -9,8 +9,11 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 /* password = letmein */
-INSERT INTO users (id,name,username,hashed_password) 
-VALUES (DEFAULT,'Admin','admin@foobar.com','$2b$10$5EguhOmNO6hE4m11nenxkOncukTWmf/aEFcFm9pvENUZhberk1ZLe');
+INSERT INTO users (id, name, username, hashed_password) 
+VALUES (1, 'Admin', 'admin@foobar.com', '$2b$10$5EguhOmNO6hE4m11nenxkOncukTWmf/aEFcFm9pvENUZhberk1ZLe');
+
+INSERT INTO users (id, name, username, hashed_password) 
+VALUES (2, 'Frank', 'frank@foobar.com', '$2b$10$5EguhOmNO6hE4m11nenxkOncukTWmf/aEFcFm9pvENUZhberk1ZLe');
 
 CREATE TABLE IF NOT EXISTS blogs (
     id  SERIAL PRIMARY KEY, 
@@ -24,10 +27,22 @@ CREATE TABLE IF NOT EXISTS blogs (
 );
 
 INSERT INTO blogs (title, author, url, likes, owner_id)
-VALUES ('React patterns', 'Michael Chan', 'https://reactpatterns.com/', 7, 1);
+VALUES ('Robin Wieruch’s Blog', 'Robin Wieruch', 'https://www.robinwieruch.de/blog/', 7, 2);
 
 INSERT INTO blogs (title, author, url, likes, owner_id)
-VALUES ('Kent C. Dodds’s Blog', 'Kent C. Dodds', 'https://kentcdodds.com/blog', 5, 1);
+VALUES ('Swizec Teller’s Blog', 'Swizec Teller TEST', 'https://swizec.com/blog/', 9, 2);
 
 INSERT INTO blogs (title, author, url, likes, owner_id)
-VALUES ('Robin Wieruch’s Blog', 'Robin Wieruch', 'https://www.robinwieruch.de/blog/', 3, 1);
+VALUES ('React patterns', 'Michael Chan', 'https://reactpatterns.com/', 6, 1);
+
+INSERT INTO blogs (title, author, url, likes, owner_id)
+VALUES ('Josh Comeau’s Blog', 'Josh Comeau', 'https://www.joshwcomeau.com/', 12, 1);
+
+INSERT INTO blogs (title, author, url, likes, owner_id)
+VALUES ('Overreacted TEST', 'Dan Abramov', 'https://overreacted.io/', 10, 1);
+
+INSERT INTO blogs (title, author, url, likes, owner_id)
+VALUES ('useHooks', 'ui.dev Team', 'https://usehooks.com/', 8, 1);
+
+INSERT INTO blogs (title, author, url, likes, owner_id)
+VALUES ('Kent C. Dodds’s Blog', 'Kent C. Dodds', 'https://kentcdodds.com/blog', 11, 2);
