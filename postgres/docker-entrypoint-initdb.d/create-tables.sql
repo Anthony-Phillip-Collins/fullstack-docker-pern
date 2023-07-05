@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS users (
     id  SERIAL PRIMARY KEY, 
     name VARCHAR(128) NOT NULL, 
-    username VARCHAR(128) NOT NULL UNIQUE, 
+    username VARCHAR(128) NOT NULL UNIQUE CONSTRAINT is_email CHECK (username ~* '^[A-Za-z0-9._+%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'), 
     hashed_password VARCHAR(128) NOT NULL,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW()
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 /* password = letmein */
 INSERT INTO users (id,name,username,hashed_password) 
-VALUES (DEFAULT,'Admin','admin','$2b$10$5EguhOmNO6hE4m11nenxkOncukTWmf/aEFcFm9pvENUZhberk1ZLe');
+VALUES (DEFAULT,'Admin','admin@foobar.com','$2b$10$5EguhOmNO6hE4m11nenxkOncukTWmf/aEFcFm9pvENUZhberk1ZLe');
 
 CREATE TABLE IF NOT EXISTS blogs (
     id  SERIAL PRIMARY KEY, 
