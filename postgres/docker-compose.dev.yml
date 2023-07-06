@@ -10,7 +10,8 @@ services:
       POSTGRES_PASSWORD: example
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
-      - ./db_dev:/var/lib/postgresql/data/pgdata
+      # to persist data, uncomment the following line
+      # - ./db_dev:/var/lib/postgresql/data/pgdata
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d/
     # ports:
     #   - 5432:5432

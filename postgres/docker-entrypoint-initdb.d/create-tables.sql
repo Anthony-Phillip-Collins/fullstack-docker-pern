@@ -30,16 +30,25 @@ INSERT INTO blogs (title, author, url, likes, owner_id)
 VALUES ('Robin Wieruch’s Blog', 'Robin Wieruch', 'https://www.robinwieruch.de/blog/', 7, 2);
 
 INSERT INTO blogs (title, author, url, likes, owner_id)
-VALUES ('Swizec Teller’s Blog', 'Swizec Teller TEST', 'https://swizec.com/blog/', 9, 2);
+VALUES ('Read more about React', 'Robin Wieruch', 'https://www.robinwieruch.de/categories/react/', 4, 2);
+
+INSERT INTO blogs (title, author, url, likes, owner_id)
+VALUES ('Swizec Teller’s Blog', 'Swizec Teller', 'https://swizec.com/blog/', 9, 2);
 
 INSERT INTO blogs (title, author, url, likes, owner_id)
 VALUES ('React patterns', 'Michael Chan', 'https://reactpatterns.com/', 6, 1);
 
 INSERT INTO blogs (title, author, url, likes, owner_id)
+VALUES ('Learn React', 'Michael Chan', 'https://learnreact.com/', 3, 1);
+
+INSERT INTO blogs (title, author, url, likes, owner_id)
 VALUES ('Josh Comeau’s Blog', 'Josh Comeau', 'https://www.joshwcomeau.com/', 12, 1);
 
 INSERT INTO blogs (title, author, url, likes, owner_id)
-VALUES ('Overreacted TEST', 'Dan Abramov', 'https://overreacted.io/', 10, 1);
+VALUES ('Overreacted', 'Dan Abramov', 'https://overreacted.io/', 10, 1);
+
+INSERT INTO blogs (title, author, url, likes, owner_id)
+VALUES ('Just JavaScript', 'Dan Abramov', 'https://justjavascript.com/', 2, 1);
 
 INSERT INTO blogs (title, author, url, likes, owner_id)
 VALUES ('useHooks', 'ui.dev Team', 'https://usehooks.com/', 8, 1);
