@@ -4,16 +4,18 @@ CREATE TABLE IF NOT EXISTS users (
     name VARCHAR(128) NOT NULL, 
     username VARCHAR(128) NOT NULL UNIQUE CONSTRAINT is_email CHECK (username ~* '^[A-Za-z0-9._+%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'), 
     hashed_password VARCHAR(128) NOT NULL,
+    admin BOOLEAN DEFAULT FALSE,
+    disabled BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW()
 );
 
 /* password = letmein */
-INSERT INTO users (id, name, username, hashed_password) 
-VALUES (1, 'Admin', 'admin@foobar.com', '$2b$10$5EguhOmNO6hE4m11nenxkOncukTWmf/aEFcFm9pvENUZhberk1ZLe');
+INSERT INTO users (id, name, username, hashed_password, admin)
+VALUES (1, 'Admin', 'admin@foobar.com', '$2b$10$5EguhOmNO6hE4m11nenxkOncukTWmf/aEFcFm9pvENUZhberk1ZLe', true);
 
 INSERT INTO users (id, name, username, hashed_password) 
-VALUES (2, 'Frank', 'frank@foobar.com', '$2b$10$5EguhOmNO6hE4m11nenxkOncukTWmf/aEFcFm9pvENUZhberk1ZLe');
+VALUES (2, 'User', 'user@foobar.com', '$2b$10$5EguhOmNO6hE4m11nenxkOncukTWmf/aEFcFm9pvENUZhberk1ZLe');
 
 CREATE TABLE IF NOT EXISTS blogs (
     id  SERIAL PRIMARY KEY, 
