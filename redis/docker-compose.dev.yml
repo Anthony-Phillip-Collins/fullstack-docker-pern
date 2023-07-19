@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  dev.redis:
+    image: redis:6.0-alpine
+    container_name: dev.redis
+    command: ['redis-server', '--appendonly', 'yes'] # Overwrite the CMD
+    ports:
+      - 6379:6379
+    volumes:
+      - ./db_dev:/data

@@ -21,6 +21,10 @@ services:
     extends:
       file: ./postgres/docker-compose.dev.yml
       service: dev.postgres
+  dev.redis:
+    extends:
+      file: ./redis/docker-compose.dev.yml
+      service: dev.redis
   dev.adminer:
     extends:
       file: ./postgres/docker-compose.dev.yml
