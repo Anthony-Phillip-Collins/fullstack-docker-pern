@@ -5,8 +5,6 @@ services:
     extends:
       file: ./frontend/docker-compose.dev.yml
       service: dev.frontend
-    environment:
-      - VITE_API_BASE_URL=http://localhost:8080/api/
     depends_on:
       dev.backend:
         condition: service_started
