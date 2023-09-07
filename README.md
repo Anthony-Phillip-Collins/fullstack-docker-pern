@@ -37,6 +37,18 @@ Or you could use the equvalent util npm scripts in package.json e.g. `npm run do
 
 Once up and running visit http://localhost:8080/
 
+### Login credentials
+
+#### Admin
+
+u: admin@foobar.com  
+p: letmein
+
+#### User
+
+u: user@foobar.com  
+p: letmein
+
 ### Connect to Adminer
 
 Once up and running visit http://localhost:8000/ and enter the following credentials.
