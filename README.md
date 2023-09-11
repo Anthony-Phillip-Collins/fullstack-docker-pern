@@ -10,6 +10,7 @@ These are the submodules:
 
 - [backend](https://github.com/Anthony-Phillip-Collins/fullstack-docker-pern-backend/)
 - [frontend](https://github.com/Anthony-Phillip-Collins/fullstack-docker-pern-frontend/)
+- [types](https://github.com/Anthony-Phillip-Collins/fullstack-docker-pern-types/)
 
 ## Local development
 

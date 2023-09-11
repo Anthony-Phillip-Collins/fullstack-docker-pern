@@ -32,6 +32,8 @@ services:
       file: ./nginx/docker-compose.dev.yml
       service: dev.nginx
     depends_on:
+      dev.backend:
+        condition: service_started
       dev.frontend:
         condition: service_started
   dev.debug-helper:
